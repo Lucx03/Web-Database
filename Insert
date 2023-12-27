@@ -1,0 +1,35 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.sql.*,java.util.*"%>
+<%
+// Read all input inserted by the user
+String user_name = request.getParameter("Sname");
+String user_icNum = request.getParameter("Sic");
+String user_regNumber = request.getParameter("Sregnum");
+String user_address = request.getParameter("Saddress");
+String user_gender = request.getParameter("Sgender");
+String user_phoneNumber = request.getParameter("Sphone");
+String user_room = request.getParameter("Sroom");
+String user_block = request.getParameter("Sblock");
+
+// Insert query to insert data into the database
+String insertQuery = "INSERT INTO student_information(name, ic, regnum, address, gender, phone, room, block) VALUES ('"
+                    + user_name + "','" + user_icNum + "','" + user_regNumber + "','" + user_address + "','"
+                    + user_gender + "','" + user_phoneNumber + "','" + user_room + "','" + user_block + "')";
+
+try {
+    Connection connection = null;
+    Statement statement = null;
+    
+    // Assuming you are using MySQL database and have the MySQL JDBC driver in your project
+    Class.forName("com.mysql.jdbc.Driver");
+    
+    connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/study", "root", "");
+    statement = connection.createStatement();
+    statement.executeUpdate(insertQuery);
+
+    // Display success message
+    response.sendRedirect("form.jsp");
+} catch (Exception e) {    
+    out.println(e);
+}
+%>
