@@ -1,0 +1,103 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Kamsis Information System (KIS)</title>
+        <style>
+            form {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: left;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: bold;
+            }
+
+            input[type="text"],
+            input[type="number"],
+            textarea {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 16px;
+                box-sizing: border-box;
+            }
+
+            input[type="radio"] {
+                margin-right: 8px;
+            }
+
+            input[type="submit"],
+            input[type="button"] {
+                background-color: #4caf50;
+                color: #fff;
+                padding: 10px;
+                cursor: pointer;
+                border: none;
+                border-radius: 4px;
+                display: inline-block;
+            }
+
+            input[type="button"] {
+                background-color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form action="Form_process.jsp" method="post">
+            <h1>Kamsis Information System (KIS)</h1>
+
+            <label for="Sname">Student Name:</label>
+            <input type="text" name="Sname" id="Sname" required="">
+
+            <label for="Sic">Student IC Number:</label>
+            <input type="text" name="Sic" id="Sic" required="">
+
+            <label for="Sregnum">Student Registration Number:</label>
+            <input type="text" name="Sregnum" id="Sregnum" required="">
+
+            <label for="Saddress">Student Address:</label>
+            <textarea name="Saddress" rows="4" required=""></textarea>
+
+            <label>Student Gender:</label>
+            <label for="male">
+                <input type="radio" id="male" name="Sgender" value="Male"> Male
+            </label>
+            <label for="female">
+                <input type="radio" id="female" name="Sgender" value="Female"> Female
+            </label>
+
+            <label for="Sphone">Student Personal Phone Number:</label>
+            <input type="text" name="Sphone" id="Sphone" required="">
+
+            <label for="Sroom">Student Room:</label>
+            <input type="text" name="Sroom" id="Sroom" required="">
+
+            <label for="Sblock">Student Block:</label>
+            <input type="text" name="Sblock" id="Sblock">
+
+            <input type="button" value="Admin Login">
+            <input type="submit" value="Submit" onclick="return confirm('Double Check Your Information Before Submit?')">
+        </form>
+    </body>
+
+</html>
