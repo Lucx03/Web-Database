@@ -59,6 +59,24 @@
             input[type="button"] {
                 background-color: red;
             }
+            .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            margin: 5px;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            }
+
+            .btn:hover {
+            background-color: #45a049;
+            }
+            a{
+                color: white;
+            }
         </style>
     </head>
 
@@ -95,7 +113,7 @@
             <label for="Sblock">Student Block:</label>
             <input type="text" name="Sblock" id="Sblock">
 
-            <input type="button" value="Admin Login">
+            <button class="btn" id="loginbtn"><a href="index.jsp">Admin Login</a></button>
             <input type="submit" value="Submit" onclick="return confirm('Double Check Your Information Before Submit?')">
         </form>
     </body>
