@@ -1,4 +1,6 @@
-in the admin page have table to view and have two function is delete and update
+in the admin page have table to view and have two function is delete and update.
+
+this code also can used in the user for the view but we can delete the function update and delete and it will be the view only becouse don't have function.
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*,java.util.*"%>
