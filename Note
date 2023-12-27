@@ -1,0 +1,8 @@
+IF the login page using the Web.xml to change password go to the file apache tomcat and find the file "conf" after that go to the tomcatUser.xml to change the password,role,username
+don't forgot to change the dependance
+
+file that should insert is
+loginpage
+admin
+userform
+userformprocess
