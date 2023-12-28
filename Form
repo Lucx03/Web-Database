@@ -81,41 +81,46 @@
     </head>
 
     <body>
-        <form action="Form_process.jsp" method="post">
+        <form action="form_process.jsp" method="post">
             <h1>Kamsis Information System (KIS)</h1>
 
-            <label for="Sname">Student Name:</label>
-            <input type="text" name="Sname" id="Sname" required="">
+            <label for="name">Student Name:</label>
+            <input type="text" name="name" id="name" required="">
 
-            <label for="Sic">Student IC Number:</label>
-            <input type="text" name="Sic" id="Sic" required="">
+            <label for="ic">Student IC Number:</label>
+            <input type="text" name="ic" id="ic" required="">
 
-            <label for="Sregnum">Student Registration Number:</label>
-            <input type="text" name="Sregnum" id="Sregnum" required="">
+            <label for="id">Student Registration Number:</label>
+            <input type="text" name="id" id="id" required="">
 
-            <label for="Saddress">Student Address:</label>
-            <textarea name="Saddress" rows="4" required=""></textarea>
+            <label for="address">Student Address:</label>
+            <textarea name="address" rows="4" required=""></textarea>
 
             <label>Student Gender:</label>
             <label for="male">
-                <input type="radio" id="male" name="Sgender" value="Male"> Male
+                <input type="radio" id="male" name="gender" value="Male"> Male
             </label>
             <label for="female">
-                <input type="radio" id="female" name="Sgender" value="Female"> Female
+                <input type="radio" id="female" name="gender" value="Female"> Female
             </label>
 
-            <label for="Sphone">Student Personal Phone Number:</label>
-            <input type="text" name="Sphone" id="Sphone" required="">
+            <label for="phone">Student Personal Phone Number:</label>
+            <input type="text" name="phone" id="phone" required="">
 
-            <label for="Sroom">Student Room:</label>
-            <input type="text" name="Sroom" id="Sroom" required="">
+            <label for="room">Student Room:</label>
+            <input type="text" name="room" id="room" required="">
 
-            <label for="Sblock">Student Block:</label>
-            <input type="text" name="Sblock" id="Sblock">
+            <label for="block">Student Block:</label>
+            <input type="text" name="block" id="block" required="">
 
-            <button class="btn" id="loginbtn"><a href="index.jsp">Admin Login</a></button>
+            <button class="btn" id="adminlogin" onclick="admin()">Admin Login</button>
             <input type="submit" value="Submit" onclick="return confirm('Double Check Your Information Before Submit?')">
         </form>
     </body>
+    <script>
+        function admin() {
+            window.location.href = "index.jsp";
+        }
+    </script>
 
 </html>
