@@ -11,6 +11,7 @@ userformprocess
 1.form
 2.create the database(after make the database make sure the dependeci that have insert mysql)
 3.admin(have a view the data and have function to delete and update the information)
+ADD* make the file name index for run the adminn"
 4.login  page
 5.change the tomcat-user.xml username,role and username
 6.change the pom.xml
