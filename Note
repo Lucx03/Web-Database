@@ -1,21 +1,22 @@
 IF the login page using the Web.xml to change password go to the file apache tomcat and find the file "conf" after that go to the tomcatUser.xml to change the password,role,username
 don't forgot to change the dependance
 
-file that should insert is
-loginpage
-admin
-userform
-userformprocess
-
-
 1.form (ADD* After make the form make sure create the function to inser the data "form_process")
+
 2.create the database(after make the database make sure the dependeci that have insert mysql)
+
 3.admin(have a view the data and have function to delete and update the information)
 ADD* make the file name index for run the adminn"
-4.login  page
+
+4.login  page (after make the login page do the function to logout the admin page)
+
 5.change the tomcat-user.xml username,role and username
+
 6.change the pom.xml
+
 7.make the function delete
+
 8.make the function update
+
 9.test the all function
 
