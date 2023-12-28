@@ -2,6 +2,12 @@ for this file have two file is update file and update process file
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 update file:
+    <%-- 
+    Document   : update
+    Created on : 28 Dec 2023, 10:22:29 am
+    Author     : User
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*,java.util.*"%>
 
@@ -14,7 +20,7 @@ try {
     
     connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/study", "root", "");
     statement = connection.createStatement();
-    String updatequery = "SELECT * FROM student_information WHERE id=" + id;
+    String updatequery = "SELECT * FROM latihan WHERE id=" + id;
     resultSet = statement.executeQuery(updatequery);
 
     while (resultSet.next()) {
@@ -109,34 +115,34 @@ try {
 
             <h1>Kamsis Information System (KIS)</h1>
 
-            <label for="Sname">Student Name:</label>
-            <input type="text" name="Sname" id="Sname" value="<%=resultSet.getString("name")%>">
+            <label for="name">Student Name:</label>
+            <input type="text" name="name" id="name" value="<%=resultSet.getString("name")%>">
 
-            <label for="Sic">Student IC Number:</label>
-            <input type="text" name="Sic" id="Sic" value="<%=resultSet.getString("ic")%>" >
+            <label for="ic">Student IC Number:</label>
+            <input type="text" name="ic" id="ic" value="<%=resultSet.getString("ic")%>" >
 
-            <label for="Sregnum">Student Registration Number:</label>
-            <input type="text" name="Sregnum" id="Sregnum" value="<%=resultSet.getString("regnum")%>" >
+            <label for="userid">Student Registration Number:</label>
+            <input type="text" name="userid" id="userid" value="<%=resultSet.getString("reg_number")%>" >
 
-            <label for="Saddress">Student Address:</label>
-            <textarea name="Saddress" rows="4" readonly=""><%=resultSet.getString("address")%></textarea>
+            <label for="address">Student Address:</label>
+            <textarea name="address" rows="4"><%=resultSet.getString("address")%></textarea>
 
             <label>Student Gender:</label>
             <label for="male">
-                <input type="radio" id="male" name="Sgender" value="Male" <%=resultSet.getString("gender").equals("Male") ? "checked" : "" %> > Male
+                <input type="radio" id="male" name="gender" value="Male" <%=resultSet.getString("gender").equals("Male") ? "checked" : "" %> > Male
             </label>
             <label for="female">
-                <input type="radio" id="female" name="Sgender" value="Female" <%=resultSet.getString("gender").equals("Female") ? "checked" : "" %>> Female
+                <input type="radio" id="female" name="gender" value="Female" <%=resultSet.getString("gender").equals("Female") ? "checked" : "" %>> Female
             </label>
 
-            <label for="Sphone">Student Personal Phone Number:</label>
-            <input type="text" name="Sphone" id="Sphone" value="<%=resultSet.getString("phone")%>" >
+            <label for="phone">Student Personal Phone Number:</label>
+            <input type="text" name="phone" id="phone" value="<%=resultSet.getString("phone")%>" >
 
-            <label for="Sroom">Student Room:</label>
-            <input type="text" name="Sroom" id="Sroom" value="<%=resultSet.getString("room")%>" >
+            <label for="room">Student Room:</label>
+            <input type="text" name="room" id="room" value="<%=resultSet.getString("room")%>" >
 
-            <label for="Sblock">Student Block:</label>
-            <input type="text" name="Sblock" id="Sblock" value="<%=resultSet.getString("block")%>" >
+            <label for="block">Student Block:</label>
+            <input type="text" name="block" id="block" value="<%=resultSet.getString("block")%>" >
 
             <button class="btn"><a href="admin.jsp">Back</a></button>
             <input type="submit" value="Update" onclick="return confirm('Double Check Your Information Before Update?')">
@@ -151,6 +157,7 @@ catch (Exception e) {
     out.println(e);
 }
 %>
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 this is the file for the update process:
