@@ -8,7 +8,7 @@ userform
 userformprocess
 
 
-1.form
+1.form (ADD* After make the form make sure create the function to inser the data "form_process")
 2.create the database(after make the database make sure the dependeci that have insert mysql)
 3.admin(have a view the data and have function to delete and update the information)
 ADD* make the file name index for run the adminn"
