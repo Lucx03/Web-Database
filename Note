@@ -8,7 +8,7 @@ don't forgot to change the dependance
 3.admin(have a view the data and have function to delete and update the information)
 ADD* make the file name index for run the adminn"
 
-4.login  page (after make the login page do the function to logout the admin page)
+4.login  page (after make the login page do the function to logout and error page the admin page)
 
 5.change the tomcat-user.xml username,role and username
 
