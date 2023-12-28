@@ -2,6 +2,12 @@ in the admin page have table to view and have two function is delete and update.
 
 this code also can used in the user for the view but we can delete the function update and delete and it will be the view only becouse don't have function.
 
+<%-- 
+    Document   : admin
+    Created on : 28 Dec 2023, 9:59:19 am
+    Author     : User
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*,java.util.*"%>
 <!DOCTYPE html>
@@ -80,14 +86,14 @@ this code also can used in the user for the view but we can delete the function 
                 Class.forName("com.mysql.jdbc.Driver");
                 connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/study","root","");
                 statement = connection.createStatement();
-                String displayquery = "SELECT * FROM student_information";
+                String displayquery = "SELECT * FROM latihan";
                 resultSet = statement.executeQuery(displayquery);
                 while(resultSet.next()){
             %>
             <tr>
                 <td><%=resultSet.getString("name")%></td>
                 <td><%=resultSet.getString("ic")%></td>
-                <td><%=resultSet.getString("regnum")%></td>
+                <td><%=resultSet.getString("reg_number")%></td>
                 <td><%=resultSet.getString("address")%></td>
                 <td><%=resultSet.getString("gender")%></td>
                 <td><%=resultSet.getString("phone")%></td>
@@ -107,7 +113,12 @@ this code also can used in the user for the view but we can delete the function 
             }
             %>
         </table>
-        <a href="logout.jsp" class="btn">Back</a>
+            <button class="btn" type="button" id="btnback" onclick="goBack()">Logout</button>
     </center>
 </body>
+<script>
+        function goBack() {
+            window.location.href = "logout.jsp";
+        }
+    </script>
 </html>
